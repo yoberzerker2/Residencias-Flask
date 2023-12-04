@@ -1,0 +1,185 @@
+{% include 'sitio/cabecera.html' %}
+<div class="container">
+    <br>
+    <h2 class="text-center">Estad&iacute;sticas y nubes de palabras de los puntos más visitados en Guanajuato</h2>
+    <br>
+    <center>
+        <div class="row">
+            <div id="loader"></div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="../static/imgs/mercado.jpg" class="card-img-top" alt="imagen del Mercado Hidalgo">
+                    <div class="card-body">
+                        <h5 class="card-title">Mercado Hidalgo</h5>
+                        <p class="card-text">Un lugar histórico, proyectado inicialmente como una eatación de
+                            ferrocarril,
+                            la mayor parte es de hierro y su planta tiene forma de la letra T.</p>
+                        <a href="/dashBoardMercadoHidalgo/"><button class="btn-i btn-2">Generar Estadísticas</button></a>
+                        <br>
+                        <br>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn-ok btn-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdropM">
+                            Nube de palabras
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdropM" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Nube de palabras del Mercado Hidalgo</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="../static/imgs/wordclouds/mercadoHidalgo_WC.png" class="card-img-top"
+                                            alt="Nube de palabras">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="../static/imgs/MonumentoP.jpg" class="card-img-top" alt="imagen del monumento al pipila">
+                    <div class="card-body">
+                        <h5 class="card-title">Monumento al Pípila</h5>
+                        <p class="card-text">Este lugar característico fue inagurado en 1939, fue una obra del escultor
+                            Juan Fernando Olaguibel
+                            ,hecha a base de cantera sobre basamento.</p>
+                        <a href="/dashBoardPipila/"><button class="btn-i btn-2">Generar Estadísticas</button></a>
+                        <br>
+                        <br>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn-ok btn-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdropPi">
+                            Nube de palabras
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdropPi" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Nube de palabras del Monumento al Pipila</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="../static/imgs/wordclouds/pipila_WC.png" class="card-img-top"
+                                            alt="Nube de palabras">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="../static/imgs/Momias.jpeg" class="card-img-top" alt="imagen del museo de las momias">
+                    <div class="card-body">
+                        <h5 class="card-title">Museo de las momias</h5>
+                        <p class="card-text">Un lugar famoso en donde se puede apreciar restos momificados de nuestros
+                            ancestros geográficos
+                            y culturales(desde 1870 a 1984).</p>
+                        <a href="/dashBoardMomias/"><button class="btn-i btn-2">Generar Estadísticas</button></a>
+                        <br>
+                        <br>
+                         <!-- Button trigger modal -->
+                         <button type="button" class="btn-ok btn-1" data-bs-toggle="modal"
+                         data-bs-target="#staticBackdropMomi">
+                         Nube de palabras
+                     </button>
+                     <!-- Modal -->
+                     <div class="modal fade" id="staticBackdropMomi" data-bs-backdrop="static" data-bs-keyboard="false"
+                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                         <div class="modal-dialog">
+                             <div class="modal-content">
+                                 <div class="modal-header">
+                                     <h5 class="modal-title" id="staticBackdropLabel">Nube de palabras del musueo de las Momias</h5>
+                                 </div>
+                                 <div class="modal-body">
+                                     <img src="../static/imgs/wordclouds/museoMomias_WC.png" class="card-img-top"
+                                         alt="Nube de palabras">
+                                 </div>
+                                 <div class="modal-footer">
+                                     <button type="button" class="btn btn-secondary"
+                                         data-bs-dismiss="modal">Cerrar</button>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-md-center">
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="../static/imgs/UG.jpg" class="card-img-top" alt="imagen de la universidad de guanjuato">
+                    <div class="card-body">
+                        <h5 class="card-title">Universidad de Guanajuato</h5>
+                        <p class="card-text">La Universidad de Guanajuato nació en el siglo XVIII; el inicio de este
+                            proyecto
+                            educativo tiene su primer antecedente en
+                            el Colegio de la Santísima Trinidad fundado en 1732.</p>
+                        <a href="/dashBoardUniversidad/"><button class="btn-i btn-2">Generar Estadísticas</button></a>
+                        <br>
+                        <br>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn-ok btn-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdropUG">
+                            Nube de palabras
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdropUG" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Nube de palabras del Mercado Hidalgo</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="../static/imgs/wordclouds/universidad_WC.png" class="card-img-top"
+                                            alt="Nube de palabras">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <nav>
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="informacion">Anterior</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="informacion">1</a>
+                </li>
+                <li class="page-item active">
+                    <a class="page-link" href="informacion2">2</a>
+                </li>
+                <li class="page-item disabled">
+                    <a class="page-link" href="#">Siguiente</a>
+                </li>
+            </ul>
+        </nav>
+    </center>
+</div>
+{% include 'sitio/pie.html' %}

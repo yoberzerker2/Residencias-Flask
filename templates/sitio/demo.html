@@ -1,0 +1,141 @@
+ {% include 'sitio/cabecera.html' %}
+<div class="container"><br><br>
+    <p class="h2 text-center">¡Hola, nos gustaria poder conocer tu punto de
+        vista sobre algunos de los lugares de Guanajuato!
+    </p><br>
+    <div class="container-sm p-4 rounded shadow-lg p-3 mb-5  text-black"
+        style="background-color: rgba(	255,	255	, 78, 0.55)">
+        <P class="lead typing_efect2">Lo interesante de esta demostración es que:</P>
+        <ul>Con ayuda de la inteligencia Artificial (IA), se analizará y clasificará tu comentario segun sea positivo o
+            negativo de un lugar de Guanajuato, esta demostración se dividirá en dos partes, la primera consta de un mapa de los puntos emblemáticos en los cuales se baso este sistema web, 
+            la segunda consta de analizar tu comentario acerca de esas mismas locaciones, por lo que ahora interactua con el mapa que esta debajo y diviertete. 
+            <br></ul>
+    </div>
+    
+    <center><h2>Lugares emblemáticos de la ciudad</h2></center>
+    <br>
+    <select class="form-select" name="select-location" id="select-location">
+        <option value="-1">Seleccione un lugar para visualizar en el mapa con más zoom:</option>
+        <option value="21.0189184,-101.2584614">Alhóndiga de Granaditas</option>
+        <option value="21.0144803,-101.2550607">Monumento al Pípila</option>	
+        <option value="21.0163884,-101.2535229">Basílica Colegiata</option>
+        <option value="21.0162059,-101.2566183">Callejón del beso</option>
+        <option value="21.0175463,-101.2552244">Museo Casa Diego Rivera</option>
+        <option value="21.0157572,-101.2534486">Jardin Union</option>
+        <option value="21.0175111,-101.2582807">Mercado Hidalgo</option>
+        <option value="21.0200597,-101.2665268">Museo de las momias de Guanajuato</option>		
+        <option value="21.0154116,-101.2531958">Teatro Juarez</option>		
+        <option value="21.0172822,-101.2539398">Universidad de Guanajuato</option>			
+    </select>
+    <br>
+
+    <div class="container-sm p-2 rounded shadow-lg p-3 mb-5  text-black"
+        style="background-color: #64293E">
+        <div id="map"></div>
+    </div>
+
+    <div class="container-sm p-4 rounded shadow-lg p-3 mb-5  text-black"
+        style="background-color: rgba(	255,	255	, 78, 0.55)">
+        <P class="lead typing_efect2">Clasificación de tu comentario:</P>
+        <center><ul>En esta caja de texto introduce tu comentario a clasificar, espera a que termine y observa los resultados.</ul></center>
+    </div>
+
+    <div class="container-sm bg-image p-5 mb-5 text-white"
+        style="background-image:url('../..//static/imgs/gto.jpg'); background-size: cover; background-position: center; border-radius: 10px;"
+        style="background-color:rgba(255, 0, 0, 0.5);" align="center">
+        <br><br>
+        <center>
+        <form method="POST">
+            <textarea class="form-control" name="text1" placeholder="Ingresa tu comentario..." rows="5" cols="10"></textarea><br><br>
+            <input class="btn btn-success" type="submit" id="toast-button">
+            <div id="loader"></div>
+        </form>
+
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <img src="../static/imgs/load.gif" height="20px" width="20px" class="rounded me-2" alt="icono">
+                <strong class="me-auto">Clasificando...</strong>
+                <small>Hace un instante</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body bg-success">
+                Se esta procesando tu comentario, espere por favor....
+              </div>
+            </div>
+        </div>
+
+        </center>
+    </div>
+    
+    {% if final %}
+    <div align="center">
+        <h2 class="bg-success text-white">Aquí está el análisis de tu comentario:</h2>
+        <br>
+        <!-- <h2>Resultado:</h2> -->
+        <br>
+        <div class="container table-responsive-sm">
+            <table  class="table table-bordered">
+                <thead>
+                    <tr style="background-color: #87CEEB;">
+                        <th>Metrica de resultado</th>
+                        <th>Puntuación en Porcentaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="positivo">
+                        <td>Sentimiento Positivo</td>
+                        <td>{{text2*100}}%</td>
+                    </tr>
+                    <tr id="neutral">
+                        <td>Sentimiento Neutral</td>
+                        <td>{{text3*100}}%</td>
+                    </tr>
+                    <tr id="negativo">
+                        <td>Sentimiento Negativo</td>
+                        <td>{{text5*100}}%</td>
+                    </tr>
+                    <tr id="combinado">
+                        <td>Sentimiento Combinado</td>
+                        <td>{{text4*100}}%</td>
+                    </tr>
+                <tbody>
+
+            </table>
+            <table class="table table-bordered">
+                <thead class="table-success">
+                    <tr>
+                        <th>Texto</th>
+                        <th>Predicción</th>
+                    </tr>
+
+                </thead>
+
+                <tr>
+                    <td>{{text1}}</td>
+                    <td>{% if (prediccion == '[1]'): %}
+                            <div id="dialog" title="Predicción Positiva">
+                                <p>La predicción del clasificador dice que el comentario es positivo</p>
+                            </div>
+                            <center><button id="opener" class="btn btn-success">Clic aquí para ver la predicción</button></center>
+
+                            <!-- <center><button type="button" class="btn btn-success" data-bs-toggle="popover" title="Predicción positiva" data-bs-content="La predicción del clasificador dice que el comentario es positivo">Clic para ver la predicción</button></center> -->
+                        {% else %}
+                            <div id="dialogN" title="Predicción Negativa">
+                                <p>La predicción del clasificador dice que el comentario es negativo</p>
+                            </div>
+                            <center><button id="openerN" class="btn btn-danger">Clic aquí para ver la predicción</button></center>
+
+                            <!-- <center><button type="button" class="btn btn-danger" data-bs-toggle="popover" title="Predicción positiva" data-bs-content="La predicción del clasificador dice que el comentario es negativo">Clic para ver la predicción</button></center> -->
+                        {% endif %}</td>
+                    <!-- <td>{{prediccion}}</td> -->
+                </tr>
+            </table>
+        </div>
+        {% else %}
+        <p></p>
+        {% endif %}
+    </div></br></br>
+    <!--result end -->
+</div>
+{% include 'sitio/pie.html' %}

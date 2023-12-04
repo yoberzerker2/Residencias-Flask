@@ -1,0 +1,206 @@
+#logo-cimat{
+    border-radius: 10px;
+    margin-left: 15px;
+}
+.parallax {
+   
+    background-image: url("../../static/imgs/gto.jpg");
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.typing_efect2 {
+    margin: 10px auto;
+    width: fit-content;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2rem;
+
+    animation: teclear 3s steps(16), efecto .5s step-end infinite alternate;
+}
+
+@keyframes teclear {
+    from {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    } to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+@keyframes efecto {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.efectoTextoC {
+    background: linear-gradient(#1497be, #1c2aec);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    animation: text 5s linear infinite;
+}
+
+@keyframes text {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.btn-ok {
+    position: relative;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #198754;
+    border-radius: 10px;
+    border: 3px solid #198754;
+}
+
+.btn-1{
+    overflow: hidden;
+    border: 3px solid #198754;
+    z-index: 1;
+}
+
+.btn-1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    left: 0;
+    top: -200%;
+    background-color: #0F5132;
+    border-radius: 50%;
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.btn-1:hover::before {
+    top: 0;
+    border-radius: 0%;
+}
+
+.btn-i {
+    position: relative;
+    padding: 10px 13px;
+    color: #fff;
+    background-color: #0D6EFD;
+    border-radius: 10px;
+    border: 3px solid #0D6EFD;
+}
+
+.btn-2{
+    overflow: hidden;
+    border: 3px solid #0D6EFD;
+    z-index: 1;
+}
+
+.btn-2::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    left: 0;
+    top: -200%;
+    background-color: #084298;
+    border-radius: 50%;
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.btn-2:hover::before {
+    top: 0;
+    border-radius: 0%;
+}
+
+#loader{
+    position: fixed;
+    z-index: 25000;
+    background: rgb(255, 255, 255);
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:all .3s ease;
+}
+#loader::before{
+    content: "";
+    position: absolute;
+    border: 2px solid rgb(176, 50, 63);
+    width: 100px;
+    height: 100px;    
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-left: 2px solid rgba(154, 26, 39, 0);
+    border-top: 2px solid rgba(170, 24, 39, 0);
+    animation: rotarload 1s linear infinite;
+    transform: rotate(0deg);      
+}
+
+@keyframes rotarload {
+  0%   {transform: rotate(0deg)}
+  100% {transform: rotate(360deg)}
+}
+
+#loader::after {
+    content: "";
+    position: absolute;
+    border: 2px solid rgb(176, 50, 63);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-left: 2px solid rgba(154, 26, 39, 0);
+    border-top: 2px solid rgba(170, 24, 39, 0);
+    animation: rotarload 1s ease-out infinite;
+    transform: rotate(0deg);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #926977;
+    
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #733e51;
+}
+
+#map {
+    height: 75vh;
+    width: 75hw;
+  }
+
+  #positivo:hover {
+    background-color: #52BE80  ;
+    border-radius: 75px;
+  }
+  #neutral:hover {
+    background-color: #CACFD2  ;
+    border-radius: 75px;
+  }
+  #negativo:hover {
+    background-color: #EC7063  ;
+    border-radius: 75px;
+  }
+  #combinado:hover {
+    background-color: #F4D03F   ;
+    border-radius: 75px;
+  }

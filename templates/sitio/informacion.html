@@ -1,0 +1,265 @@
+{% include 'sitio/cabecera.html' %}
+<div class="container">
+    <br>
+    <h2 class="text-center">Estad&iacute;sticas y nubes de palabras de los puntos más visitados en Guanajuato</h2>
+    <br>
+    <center>
+        <div class="row">
+            <div id="loader"></div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="../static/imgs/ALHONDIGA.png" class="card-img-top" alt="imagen de la alhondiga">
+                    <div class="card-body">
+                        <h5 class="card-title">Alhóndiga</h5>
+                        <p class="card-text">La Alhóndiga de Granaditas es uno de los edificios más emblemáticos de la
+                            Ciudad de
+                            Guanajuato.</p>
+                        <a href="/dashBoardAlhondiga/"><button class="btn-i btn-2">Generar Estadísticas</button></a>
+                        <br>
+                        <br>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn-ok btn-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            Nube de palabras
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Nube de palabras de la
+                                            alhondiga</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="../static/imgs/wordclouds/alhondiga_WC.png" class="card-img-top"
+                                            alt="Nube de palabras">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="../static/imgs/teatro_juarez.jpg" class="card-img-top" alt="imagen del teatro juarez">
+                    <div class="card-body">
+                        <h5 class="card-title">Teatro Juarez</h5>
+                        <p class="card-text">El Teatro Juárez es uno de los recintos de su género más bellos del país.
+                            Su edificación inició en el año de 1873.</p>
+                        <a href="/dashBoardTeatroJuarez/"><button class="btn-i btn-2">Generar Estadísticas</button></a>
+                        <br>
+                        <br>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn-ok btn-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdropT">
+                            Nube de palabras
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdropT" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Nube de palabras del Teatro
+                                            Juarez</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="../static/imgs/wordclouds/teatroJuarez_WC.png" class="card-img-top"
+                                            alt="Nube de palabras">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="../static/imgs/basilica.jpg" class="card-img-top" alt="imagen de la basilica colegiata">
+                    <div class="card-body">
+                        <h5 class="card-title">Basílica Colegiata</h5>
+                        <p class="card-text">Antigua parroquia de Guanajuato hasta que en el año se elevo a categoria de
+                            la
+                            basílica, se incio en 1771 y se concluyo en 1976.</p>
+                        <a href="/dashBoardBasilica/"><button class="btn-i btn-2">Generar Estadísticas</button></a>
+                        <br>
+                        <br>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn-ok btn-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdropB">
+                            Nube de palabras
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdropB" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Nube de palabras de la Basilica
+                                            Colegiata</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="../static/imgs/wordclouds/basilica_WC.png" class="card-img-top"
+                                            alt="Nube de palabras">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="../static/imgs/callejonB.jpg" class="card-img-top" alt="imagen del callejon del beso">
+                    <div class="card-body">
+                        <h5 class="card-title">Callejón del Beso</h5>
+                        <p class="card-text">Un lugar emblematico donde nace una historia de amor en el corazon de
+                            Guanajuato.</p>
+                        <a href="/dashBoardCallejonBeso/"><button class="btn-i btn-2">Generar Estadísticas</button></a>
+                        <br>
+                        <br>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn-ok btn-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdropC">
+                            Nube de palabras
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdropC" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Nube de palabras del Callejon
+                                            del Beso</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="../static/imgs/wordclouds/callejonBeso_WC.png" class="card-img-top"
+                                            alt="Nube de palabras">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="../static/imgs/Diego.jpg" class="card-img-top" alt="imagen de la casa de diego rivera">
+                    <div class="card-body">
+                        <h5 class="card-title">Casa de Diego Rivera</h5>
+                        <p class="card-text">Esta es la casa donde nacio Diego Rivera, posteriormente en 1975 se declara
+                            inagurado como
+                            museo Casa de Diego Rivera.</p>
+                        <a href="/dashBoardCasaDiego/"><button class="btn-i btn-2">Generar Estadísticas</button></a>
+                        <br>
+                        <br>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn-ok btn-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdropD">
+                            Nube de palabras
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdropD" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Nube de palabras de la Casa de
+                                            Diego Rivera</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="../static/imgs/wordclouds/casaDiegoRivera_WC.png" class="card-img-top"
+                                            alt="Nube de palabras">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 20rem;">
+                    <img src="../static/imgs/union.jpg" class="card-img-top" alt="imagen del jardin unión">
+                    <div class="card-body">
+                        <h5 class="card-title">Jardín Unión</h5>
+                        <p class="card-text">Un lugar representativo del centro de Guanajuato, en donde las familias
+                            pueden disfrutar de un hermoso
+                            rato.</p>
+                        <a href="/dashBoardJardinUnion/"><button class="btn-i btn-2">Generar Estadísticas</button></a>
+                        <br>
+                        <br>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn-ok btn-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdropU">
+                            Nube de palabras
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdropU" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Nube de palabras del Jardin
+                                            Union</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="../static/imgs/wordclouds/JardinUnion_WC.png" class="card-img-top"
+                                            alt="Nube de palabras">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <nav>
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#">Anterior</a>
+                </li>
+                <li class="page-item active">
+                    <a class="page-link" href="informacion">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="informacion2">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="informacion2">Siguiente</a>
+                </li>
+            </ul>
+        </nav>
+    </center>
+</div>
+{% include 'sitio/pie.html' %}
